@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<title>GUT</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"> -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="main.css">
+
+</head>
+
+<body>
+
+	<div class="container">
+		<p>
+			<a class="btn btn-primary" onclick="localStorage.setItem('tipo', 'erro'); document.getElementById('calcular').style.display = 'block'"
+				data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+				aria-controls="collapseExample" id="btnerro">
+				Erro
+			</a>
+			<a class="btn btn-secondary" onclick="localStorage.setItem('tipo', 'melhoria'); document.getElementById('calcular').style.display = 'block'"
+				data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false"
+				aria-controls="collapseExample2" id="btnmelhoria">
+				Melhoria
+			</a>
+		</p>
+	</div>
+
+	<div class="collapse" id="collapseExample">
+		<div class="container">
+			<div class="card">
+				<label for="customRange2" class="form-label"> O processo esta paralisado? Considere 1 - Funcionando
+					normalmente e 5 - Está totalmente inoperável.
+				</label>
+				<input type="range" class="form-range" min="1" max="5" id="erro1">
+			</div>
+			<div class="card">
+				<label for="customRange2" class="form-label"> Quantas pessoas são afetadas? Considere 1 - 1 Pessoa e 5 -
+					50 ou mais pessoas. </label>
+				<input type="range" class="form-range" min="1" max="5" id="erro2">
+			</div>
+			<div class="card">
+				<label for="customRange2" class="form-label"> Com o passar do tempo o problema tende a piorar? Considere
+					1 - Melhorar aos poucos e 5 - Piora rápida. </label>
+				<input type="range" class="form-range" min="1" max="5" id="erro3">
+			</div>
+			<div class="card">
+				<label for="customRange2" class="form-label"> Há impacto financeiro? Considere 1 - Não há impacto e 5 -
+					Há muito impacto. </label>
+				<input type="range" class="form-range" min="1" max="5" id="erro4">
+			</div>
+			<div class="card">
+				<label for="customRange2" class="form-label"> Há impacto financeiro? Considere 1 - Não há impacto e 5 -
+					Há muito impacto. </label>
+				<input type="range" class="form-range" min="1" max="5" id="erro5" value="">
+			</div>
+		</div>
+	</div>
+
+
+	<div class="collapse" id="collapseExample2">
+		<div class="container">
+			<div class="card">
+				<label for="customRange2" class="form-label"> É possível continuar utilizando o processo sem a melhoria?
+					Considere 1 - Não afeta e 5 - Inviável
+				</label>
+				<input type="range" class="form-range" min="1" max="5" id="melhoria1">
+			</div>
+			<div class="card">
+				<label for="customRange2" class="form-label"> Quantas pessoas são afetadas pela melhoria? Considere 1 -
+					1 Pessoa e 5 - 50 ou mais pessoas. </label>
+				<input type="range" class="form-range" min="1" max="5" id="melhoria2">
+			</div>
+			<div class="card">
+				<label for="customRange2" class="form-label"> A melhoria reduz o número de chamados de suporte?
+					Considere 1 - Não afeta e 5 - Reduz consideravelmente.</label>
+				<input type="range" class="form-range" min="1" max="5" id="melhoria3">
+			</div>
+			<div class="card">
+				<label for="customRange2" class="form-label"> Considere o tempo que essa melhoria necessita estar
+					implantada. Considere 1 - Tempo indeterminado e 2 - 1 semana. </label>
+				<input type="range" class="form-range" min="1" max="5" id="melhoria4">
+			</div>
+			<div class="card">
+				<label for="customRange2" class="form-label"> É um cliente importante? Considere 1 - pouco importante e
+					5 - Muito importante. </label>
+				<input type="range" class="form-range" min="1" max="5" id="melhoria5" value="">
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<button type="button" class="btn btn-success" id="calcular">Calcular</button>
+	</div>
+
+	<!-- <script src="jquery-3.5.1.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script> -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+		crossorigin="anonymous"></script>
+	<script src="main.js"></script>
+
+	<div class="modal hidden">
+		<div class="container">
+			<div class="body">
+				<p id="resultado">155
+				<p>
+			</div>
+		</div>
+	</div>
+
+
+
+</body>
+
+</html>
